@@ -1,0 +1,89 @@
+
+body{
+    font-family: t ;
+    background-color: #C0C0C0;
+}
+
+#txt{
+    background-color: #C0C0C0;
+    color: black;
+    padding: 30px;
+}
+
+.menu {
+    display: flex;              /* Transformation en flexbox */
+    padding:0;                  /* Suppression des marges internes */
+    background-color: #C0C0C0;     /* Ajout de la couleur d'arrière-plan */
+    justify-content: center     /* Alignements des liens dans le menu */
+}
+
+.menu li {
+    list-style-type: none ;       /* Suppression des puces */
+}
+.menu a {
+    display:block;                /* Transformation en block */
+    min-width: 120px;             /* Largeur minimale des liens */   
+    
+    margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
+    padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
+    text-align: center;           /* Centrage du texte */   
+    background-color: #1C1C1C;    /* Arrière-plan */
+    color: #fff;                  /* Couleur du texte */
+    text-decoration: none;        /* Suppression du soulignement */
+    border: 1px solid #fff;       /* Ajout d'une bordure */
+    border-radius: 4px;           /* Arrondis des bordures */
+    transition: all 1s ;          /* Ajout des effets de transition */
+}
+
+.menu a.actif {    
+    background-color: #000 ; 
+    color: #1ABC9C ;
+    border-color: #1ABC9C ;
+}
+.menu a:hover,
+.menu a:hover.actif{
+  background-color: #610B0B;
+  color: #ffe843;
+  border-color: #ffe843;
+}
+
+#divgraph{
+    background-color: white;
+    width: 80%;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* button submit & boutton reset*/
+#monForm input[type="submit"]
+{
+	border: #DDEEFF 1px solid;
+	width: 25%;
+}
+
+#monForm input[type="submit"]:hover
+{
+	background-color: #66CC33;
+	cursor: pointer;
+}
+
+#monForm input[type="reset"]
+{
+	border: #DDEEFF 1px solid;
+	width: 25%;
+}
+
+#monForm input[type="reset"]:hover
+{
+	background-color: #E6484D;
+	cursor: pointer;
+}
+
+
+/* 
+
+. pour class=""
+# pour les id=""
+
+*/
