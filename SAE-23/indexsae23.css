@@ -1,20 +1,22 @@
 
 body{
     font-family: t ;
-    background-color: #C0C0C0;
+    background-color: black;
+    color: white;
 }
 
 #txt{
-    background-color: #C0C0C0;
-    color: black;
+    background-color: black;
+    color: white;
     padding: 30px;
 }
 
 .menu {
     display: flex;              /* Transformation en flexbox */
     padding:0;                  /* Suppression des marges internes */
-    background-color: #C0C0C0;     /* Ajout de la couleur d'arrière-plan */
-    justify-content: center     /* Alignements des liens dans le menu */
+    background-color: black;     /* Ajout de la couleur d'arrière-plan */
+    justify-content: center;
+    color: white;  
 }
 
 .menu li {
@@ -37,18 +39,18 @@ body{
 
 .menu a.actif {    
     background-color: #000 ; 
-    color: #1ABC9C ;
-    border-color: #1ABC9C ;
+    color: white ;
+    border-color: white ;
 }
 .menu a:hover,
 .menu a:hover.actif{
-  background-color: #610B0B;
-  color: #ffe843;
-  border-color: #ffe843;
+  background-color: green;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
-#divbase{
-    background-color: red;
+#divgraph{
+    background-color: white;
     width: 80%;
     margin-top: 1%;
     margin-left: 10%;

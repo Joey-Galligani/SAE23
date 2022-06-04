@@ -20,14 +20,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Check if username is empty
     if(empty(trim($_POST["username"]))){
-        $username_err = "Please enter username.";
+        $username_err = "Entré votre Nom d'utilisateur, s'il vous plait.";
     } else{
         $username = trim($_POST["username"]);
     }
     
     // Check if password is empty
     if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter your password.";
+        $password_err = "Entré votre mot de passe, s'il vous plait.";
     } else{
         $password = trim($_POST["password"]);
     }
@@ -67,15 +67,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             header("location: welcome.php");
                         } else{
                             // Password is not valid, display a generic error message
-                            $login_err = "Invalid username or password.";
+                            $login_err = "Le Mot de passe ou le Nom d'utilisateur est incorrect.";
                         }
                     }
                 } else{
                     // Username doesn't exist, display a generic error message
-                    $login_err = "Invalid username or password.";
+                    $login_err = "Le Mot de passe ou le Nom d'utilisateur est incorrect.";
                 }
             } else{
-                echo "Oops! Something went wrong. Please try again later.";
+                echo "Un problème est survenu. Veuillez réessayer plus tard.";
             }
 
             // Close statement
@@ -92,7 +92,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>RT Coin - S'identifier</title>
     <link rel="stylesheet" href="indexsae23.css"/>
     <style>
         body{ font: 14px sans-serif; }
@@ -101,30 +101,35 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     <div class="wrapper">
-        <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
+
+        <h2>RT Coin - Identification :</h2>
+        <br>
+        <p>Veuillez vous identifier pour vous connecter.</p>
 
         <?php 
         if(!empty($login_err)){
             echo '<div class="alert alert-danger">' . $login_err . '</div>';
         }        
         ?>
-
+        <br>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">
-                <label>Username</label>
+                <label>Nom d'utilisateur</label>
                 <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
-            </div>    
+            </div> 
+            <br>   
             <div class="form-group">
-                <label>Password</label>
+                <label>Mot de passe</label>
                 <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
+            <br>
             <div id="monForm">
-                <input type="submit" class="btn btn-primary" value="Login">
+                <input type="submit" class="btn btn-primary" value="Connexion">
             </div>
-            <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+            <br>
+            <p>Vous n'avez pas de compte ? <a href="register.php">Inscrivez-vous ici !</a>.</p>
         </form>
     </div>
 </body>

@@ -14,6 +14,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <head>
         <title>RT Coin - Achats & Ventes</title>
         <link rel="stylesheet" href="indexsae23.css"/>
+		<style>
+        	body{ font: 14px sans-serif; text-align: center; }
+    	</style>
     </head>
     <body>
 
@@ -30,17 +33,17 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						<a href="graph.php">Graphiques</a>
 					</li>
 					<li>
-						<a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
+						<a href="reset-password.php" class="btn btn-warning"> Changer votre mot de passe </a>
 					</li>
 					<li>
-						<a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+						<a href="logout.php" class="btn btn-danger ml-3">Se déconnecter</a>
 					</li>
 				</ul>
 				
 			</nav>
 
 	<div id="divbase">
-        <p>az</p>
+        <p></p>
 	</div>
 
 </body>
