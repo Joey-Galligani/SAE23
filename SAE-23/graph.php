@@ -43,7 +43,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 					</li>
 				</ul>	
 			</nav>
-
+	<br>
+	<div id="txtgrf">Cours du Bitcoin en temps réel : </div>
+	<br>
 	<div id="divgraph">
 
     <section>

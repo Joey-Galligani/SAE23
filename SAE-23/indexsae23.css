@@ -82,6 +82,16 @@ body{
 	cursor: pointer;
 }
 
+#txtgrf{
+    color: white;
+    background-color: #000;
+}
+
+#myChart{
+    color:#fff;
+    background-color: #000;
+}
+
 
 /* 
 

@@ -20,8 +20,8 @@ fetch(urlToFetch)
             labels: btcLabel,
             datasets: [{
                 label: 'prix du bitcoin',
-                backgroundColor: 'rgb(255,99,132)',
-                borderColor: 'rgb(255,99,132)',
+                backgroundColor: 'rgb(10,255,10)',
+                borderColor: 'rgb(10,255,10)',
                 data: btcData,
             }]
         };
