@@ -99,17 +99,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>S'identifier</title>
+    <title>RT - S'inscrire</title>
     <link rel="stylesheet" href="indexsae23.css"/>
     <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
+        body{ font: 14px sans-serif; text-align: center; }
+        .wrapper{ width: 90%; padding: 5%; }
+        h2{ color: #00ff06 }
     </style>
 </head>
 <body>
     
     <div class="wrapper">
-        <h2>RT Coin - S'identifier</h2>
+        <h2>S'inscrire :</h2>
         <br>
         <p>Veuillez remplir ce formulaire pour créer un compte.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

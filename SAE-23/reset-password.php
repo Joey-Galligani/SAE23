@@ -77,8 +77,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>RT Coin - Changer votre mot de passe :</title>
     <link rel="stylesheet" href="indexsae23.css"/>
     <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
+        body{ font: 14px sans-serif; text-align: center }
+        .wrapper{ width: 90%; padding: 5%; }
+        h2{ color: #00ff06 }
     </style>
 </head>
 <body>
@@ -107,7 +108,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <div class="wrapper">
 
-        <h2>Changer votre mot de passe</h2>
+        <h2>Changer votre mot de passe : </h2>
         <br>
         <p>Veuillez remplir ce formulaire pour réinitialiser votre mot de passe.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
@@ -124,9 +125,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
             <br>
+            <br>
             <div id="monForm">
                 <input type="submit" class="btn btn-primary" value="Valider">
-                <!--<a class="btn btn-link ml-2" href="welcome.php">Annuler</a>-->
                 <input type="reset" class="btn btn-primary" value="Annuler" href="welcome.php">
             </div>
         </form>

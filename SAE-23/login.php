@@ -95,11 +95,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>RT Coin - S'identifier</title>
     <link rel="stylesheet" href="indexsae23.css"/>
     <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
+        body{ font: 14px sans-serif; text-align: center}
+        .wrapper{ width: 90%; padding: 5%; }
+        h2{ color: #00ff06 }
     </style>
 </head>
 <body>
+
     <div class="wrapper">
 
         <h2>RT Coin - Identification :</h2>

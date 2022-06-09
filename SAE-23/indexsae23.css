@@ -61,7 +61,7 @@ body{
 #monForm input[type="submit"]
 {
 	border: #DDEEFF 1px solid;
-	width: 25%;
+	width: 8%;
 }
 
 #monForm input[type="submit"]:hover
@@ -73,7 +73,7 @@ body{
 #monForm input[type="reset"]
 {
 	border: #DDEEFF 1px solid;
-	width: 25%;
+	width: 8%;
 }
 
 #monForm input[type="reset"]:hover
@@ -91,7 +91,6 @@ body{
     color:#fff;
     background-color: #000;
 }
-
 
 /* 
 

@@ -19,9 +19,9 @@ fetch(urlToFetch)
         const data = {
             labels: btcLabel,
             datasets: [{
-                label: 'prix du bitcoin',
+                label: 'Prix du Bitcoin',
                 backgroundColor: 'rgb(10,255,10)',
-                borderColor: 'rgb(10,255,10)',
+                borderColor: 'rgb(10,66,10)',
                 data: btcData,
             }]
         };
@@ -36,5 +36,5 @@ fetch(urlToFetch)
         const myChart = new Chart(
             document.getElementById('myChart'),
             config
-        );
+            );
     }); 
