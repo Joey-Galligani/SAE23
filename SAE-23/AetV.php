@@ -73,10 +73,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		}
 
 		?>
-
+		<div id="pbtc"> </div>
 	</div>
 
 
+	<script>
+		<?php
+		if(isset($data[0]['bitcoin'])){
+    		printf("const nbbtc = %s;", $data[0]['bitcoin']);
+			
+		}
+		?>
+
+    	const pricesWs = new WebSocket('wss://ws.coincap.io/prices?assets=bitcoin')
+
+		pricesWs.onmessage = function (msg) {
+			prix = JSON.parse(msg.data).bitcoin;
+			document.getElementById("pbtc").innerHTML="Ce qui vaut "+(prix*nbbtc)+"€";
+			console.log(msg.data)
+		}
+
+	</script>
 </script>
 </body>
 </html>
