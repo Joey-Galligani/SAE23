@@ -1,8 +1,8 @@
 <?php
-// Initialize the session
+
 session_start();
  
-// Check if the user is logged in, if not then redirect him to login page
+
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
@@ -19,7 +19,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<link rel="stylesheet" href="style.css">
 		<style>
-        	body{ font: 14px sans-serif; text-align: center; }
+        	body{ font: 14px sans-serif; text-align: center;}
     	</style>
     </head>
     <body>
@@ -59,7 +59,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="app.js"></script>
-
 
     </div>
 

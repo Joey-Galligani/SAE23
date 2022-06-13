@@ -13,15 +13,16 @@ fetch(urlToFetch)
         response.data.forEach(element => {
             console.log(element)
             btcData.push(element.priceUsd)
-            btcLabel.push(element.date)
+            console.log(element.date);
+            btcLabel.push(element.date.slice(0, 10))
         });
 
         const data = {
             labels: btcLabel,
             datasets: [{
-                label: 'Prix du Bitcoin',
-                backgroundColor: 'rgb(10,255,10)',
-                borderColor: 'rgb(10,66,10)',
+                label: 'prix du bitcoin',
+                backgroundColor: 'rgb(10,255,50)',
+                borderColor: 'rgb(15,125,6)',
                 data: btcData,
             }]
         };
@@ -36,5 +37,7 @@ fetch(urlToFetch)
         const myChart = new Chart(
             document.getElementById('myChart'),
             config
-            );
-    }); 
+        );
+    });
+
+    //document.getElementById("zbi").innerHTML(data);

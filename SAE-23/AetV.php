@@ -1,11 +1,14 @@
 <?php
-// Initialize the session
+
 session_start();
+     require_once 'config.php';
  
-// Check if the user is logged in, if not then redirect him to login page
+
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
+
+
 }
 ?>
 
@@ -16,6 +19,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <link rel="stylesheet" href="indexsae23.css"/>
 		<style>
         	body{ font: 14px sans-serif; text-align: center; }
+			body{background-image:url("RT-COIN-2.png");}
+
     	</style>
     </head>
     <body>
@@ -42,10 +47,36 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 				
 			</nav>
 
-	<div id="divbase">
-        <p></p>
+	<div>
+		<br>
+		<br>
+		<p>Vous pouvez acheter ou vendre 0.1 Bitcoin en cliquant ci-dessous</p><br>
+		<a href="achats.php">Acheter</a> <br> <br> <a href="ventes.php">Vendre</a>
+		<br>
+		<br>
+		<br>
+
+		<?php
+
+		$USER=$_SESSION['username'];
+
+		$mysqlClient = new PDO('mysql:host=localhost;dbname=db_GALLIGANI;charset=UTF8','22100332','JoeyJoey',[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+
+		$REQUETE ="SELECT bitcoin FROM users WHERE username='".$USER."';";
+		$insert = $mysqlClient->prepare($REQUETE);
+		$insert->execute();
+		$data = $insert->fetchAll();
+		$insert->closeCursor();
+	
+		if(isset($data[0]['bitcoin'])){
+    		printf("<h1>Vous possédez actuellement %s Bitcoin</h1>", $data[0]['bitcoin']);
+		}
+
+		?>
+
 	</div>
 
+
+</script>
 </body>
 </html>
-

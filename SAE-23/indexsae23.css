@@ -1,26 +1,25 @@
-
 body{
     font-family: t ;
-    background-color: black;
     color: white;
+    background-color: #000;
 }
 
 #txt{
-    background-color: black;
     color: white;
     padding: 30px;
+    background-color: #000;
 }
 
 .menu {
     display: flex;              /* Transformation en flexbox */
-    padding:0;                  /* Suppression des marges internes */
-    background-color: black;     /* Ajout de la couleur d'arrière-plan */
+    padding:0;                  /* Suppression des marges internes */    
     justify-content: center;
     color: white;  
 }
 
 .menu li {
     list-style-type: none ;       /* Suppression des puces */
+    
 }
 .menu a {
     display:block;                /* Transformation en block */
@@ -29,7 +28,6 @@ body{
     margin: 0.5rem;               /* Marges externes (1 valeurs = 4 directions) */
     padding: 0.4rem 0;            /* Marges internes (2 valeurs = haut/bas et gauche/droite)*/
     text-align: center;           /* Centrage du texte */   
-    background-color: #1C1C1C;    /* Arrière-plan */
     color: #fff;                  /* Couleur du texte */
     text-decoration: none;        /* Suppression du soulignement */
     border: 1px solid #fff;       /* Ajout d'une bordure */
@@ -37,14 +35,13 @@ body{
     transition: all 1s ;          /* Ajout des effets de transition */
 }
 
-.menu a.actif {    
-    background-color: #000 ; 
+.menu a.actif {     
     color: white ;
     border-color: white ;
 }
 .menu a:hover,
 .menu a:hover.actif{
-  background-color: green;
+  background-color: #00ff06;
   color: #ffffff;
   border-color: #ffffff;
 }
